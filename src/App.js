@@ -16,10 +16,10 @@ function App() {
         <GiftForKids/>
       </div>
 
-      <div class="accordion"> 
+      <div className="accordion"> 
         <div className="tab">
           <input type="checkbox" id="tab1" name="tab-group"/>
-          <label for="tab1" className="tab-title">Open all Gifts </label> 
+          <label htmlFor="tab1" className="tab-title">Open all Gifts </label> 
           <section className="tab-content"> 
             <div>
               <GiftList/>
