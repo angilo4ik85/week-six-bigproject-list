@@ -1,8 +1,6 @@
 import './App.css';
-import GiftForHer from "./GiftsForHer";
-import GiftForHim from "./GiftForHim";
-import GiftForKids from "./GiftForKids";
 import GiftList from './GiftList';
+import Carousel from './Carousel';
 
 function App() {
   return (<div>
@@ -11,15 +9,15 @@ function App() {
       </div>
 
       <div className='container'>
-        <GiftForHer/>
-        <GiftForHim/>
-        <GiftForKids/>
+        <Carousel start="0" end="11" who="HER"/>
+        <Carousel start="5" end="6" who="HIM"/>
+        <Carousel start="10" end="1" who="KIDS"/>
       </div>
 
-      <div class="accordion"> 
+      <div className="accordion"> 
         <div className="tab">
           <input type="checkbox" id="tab1" name="tab-group"/>
-          <label for="tab1" className="tab-title">Open all Gifts </label> 
+          <label htmlFor="tab1" className="tab-title">Open all Gifts </label> 
           <section className="tab-content"> 
             <div>
               <GiftList/>

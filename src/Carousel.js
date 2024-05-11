@@ -2,16 +2,16 @@ import { useState } from "react";
 import { data } from './data';
 
 
-function GiftForHer() {
-    const [gift, setGift] = useState(0);
+function Carousel({ start, end, who }) {
+    const [gift, setGift] = useState(start);
     const {number, title, description, price, image} = data[gift];
     const [showText, setShowText] = useState(false);
 
     const previousGift = () => {
         setGift((gift => {
             gift --;
-            if (gift < 0) {
-                return data.length-11;
+            if (gift < start) {
+                return data.length - end;
             }
             return gift;
         }))
@@ -20,8 +20,8 @@ function GiftForHer() {
     const nextGift = () => {
         setGift((gift => {
             gift ++;
-            if (gift > data.length-11) {
-                gift = 0;
+            if (gift > data.length - end) {
+                gift = start;
             }
             return gift;
         }))
@@ -29,7 +29,7 @@ function GiftForHer() {
 
         return (
                 <div className='items'>
-                    <h2>GIFT FOR HER</h2>
+                    <h2>GIFT FOR { who }</h2>
 
                     <div className="img">
                         <img src={ image } alt='gifty' width='200px'/>
@@ -38,10 +38,9 @@ function GiftForHer() {
                         <h2>{ number } {title}</h2>
                     </div>
                     <div>
-                        <p>
-                            {showText ? description : description.substring(0, 25) + '...'}
+                        <p>{showText ? description : description.substring(0, 25) + '...'}
                             <button onClick={() => setShowText(!showText)} className="show">
-                                { showText ? 'show less' : 'show more' }
+                                {showText ? 'show less' : 'show more'}
                             </button>
                         </p>
                     </div>
@@ -62,4 +61,4 @@ function GiftForHer() {
     );
 }
 
-export default GiftForHer;
+export default Carousel;
