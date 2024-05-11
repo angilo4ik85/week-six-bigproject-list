@@ -1,38 +1,129 @@
-.App {
+body {
+  background-color: rgb(177, 218, 196);
+}
+.clearBtn {
+  display: flex;
+  justify-content: flex-end;
+  width: 90vw;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+}
+h4 {
+  flex: 1;
+}
+h1, h2, h3 {
+  letter-spacing: 2px;
+  color: rgb(42, 158, 137);
+  font-family: "Dosis", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+.items {
+  width: 28vw;
   text-align: center;
+  border: solid 5px #fff;
+  border-radius: 50px;
+  margin: 20px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img {
+  height: 300px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+img {
+  border-radius: 15px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p {
+  width: 25vw;
+  margin-left: 20px;
+  font-size: 15px;
+  font-family: "Dosis", sans-serif;
+}
+.show {
+  color: #fff;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: "Dosis", sans-serif;
+}
+.btn {
+  margin: 20px;
+  padding: 5px;
+  width: 10vw;
+  border: none;
+  border-radius: 50px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  background: #fff;
+  text-transform: uppercase;
+}
+.Head {
+  display: flex;
+  justify-content: space-between;
+}
+.List {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.Gift {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: rgb(238, 240, 231);
+  border: solid 2px white;
+  border-radius: 50px;
+  padding: 15px;
+  margin: 15px;
+  width: 15vw;
 }
 
-.App-link {
-  color: #61dafb;
+.tab input, .tab-content { 
+  display: none; 
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tab {
+  font-size: 25px;
+  padding: 15px;
+  color: rgb(42, 158, 137);
+  letter-spacing: 1px;
+  border: solid 5px #fff;
+  border-radius: 50px;
+  font-family: "Dosis", sans-serif;
+}
+.tab-title {
+  padding: 15px;
+  padding-left: 50px;
+  display: block;
+  text-transform: uppercase; 
+  font-weight: bold; 
+  cursor: pointer; 
+}
+.tab-title::after {
+  content: '+'; 
+  float: right;
+  font-size: 30px;
+}
+.tab-content {
+  padding-bottom: 20px; 
+}
+.tab :checked + .tab-title { 
+  color: rgb(42, 158, 137);
+  border-radius: 30px;
+  background-color: rgb(238, 240, 231);
+}
+.tab :checked + .tab-title::after {
+  content: '−'; 
+}
+.tab :checked ~ .tab-content {
+  display: block; 
 }
